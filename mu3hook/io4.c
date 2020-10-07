@@ -16,11 +16,11 @@ static const struct io4_ops mu3_io4_ops = {
     .poll = mu3_io4_poll,
 };
 
-HRESULT mu3_io4_hook_init(void)
+HRESULT mu3_io4_hook_init(const struct io4_config *cfg)
 {
     HRESULT hr;
 
-    hr = io4_hook_init(&mu3_io4_ops, NULL);
+    hr = io4_hook_init(cfg, &mu3_io4_ops, NULL);
 
     if (FAILED(hr)) {
         return hr;

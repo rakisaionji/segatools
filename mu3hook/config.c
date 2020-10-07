@@ -19,5 +19,6 @@ void mu3_hook_config_load(
 
     platform_config_load(&cfg->platform, filename);
     aime_config_load(&cfg->aime, filename);
+    io4_config_load(&cfg->io4, filename);
     gfx_config_load(&cfg->gfx, filename);
 }

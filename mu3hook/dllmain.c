@@ -60,7 +60,7 @@ static DWORD CALLBACK mu3_pre_startup(void)
         return hr;
     }
 
-    hr = mu3_io4_hook_init();
+    hr = mu3_io4_hook_init(&mu3_hook_cfg.io4);
 
     if (FAILED(hr)) {
         return hr;
